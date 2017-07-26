@@ -1,4 +1,4 @@
-package edu.neuralnet.core.activation;
+package edu.neuralnet.core.function.activation;
 
 /**
  * Sinusoid activation function. Calculation is based on:

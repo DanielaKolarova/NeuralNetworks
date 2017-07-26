@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package edu.neuralnet.core.activation;
+package edu.neuralnet.core.function.activation;
 
 /**
  * Sigmoid activation function. Calculation is based on: 

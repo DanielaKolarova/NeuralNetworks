@@ -1,4 +1,4 @@
-package edu.neuralnet.core.activation;
+package edu.neuralnet.core.function.activation;
 
 /**
  * Step neuron activation function, the output y of this activation function is

@@ -1,4 +1,4 @@
-package edu.neuralnet.core.input;
+package edu.neuralnet.core.function.input;
 
 import java.util.List;
 

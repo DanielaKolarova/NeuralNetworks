@@ -3,8 +3,8 @@ package edu.neuralnet.core;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.neuralnet.core.activation.ActivationFunction;
-import edu.neuralnet.core.input.InputSummingFunction;
+import edu.neuralnet.core.function.activation.ActivationFunction;
+import edu.neuralnet.core.function.input.InputSummingFunction;
 
 /**
  * Represents a neuron model comprised of: </br>
