@@ -17,7 +17,7 @@
 package edu.neuralnet.core.function.activation;
 
 /**
- * Sigmoid activation function. Calculation is based on: 
+ * Sigmoid activation function. Calculation is based on:
  * 
  * y = 1/(1+ e^(-slope*x))
  * 
@@ -28,6 +28,13 @@ public class SigmoidActivationFunction implements ActivationFunction {
 	 * Slope parameter
 	 */
 	private double slope = 1d;
+
+
+	/**
+	 * Creates a Sigmoid function with default slope value.
+	 */
+	public SigmoidActivationFunction() {
+	}
 
 	/**
 	 * Creates a Sigmoid function with a slope parameter.
@@ -50,9 +57,8 @@ public class SigmoidActivationFunction implements ActivationFunction {
 	}
 
 	@Override
-	public double calculateDerivative(double totalInput) {
-		// TODO Auto-generated method stub
-		return 0;
+	public double calculateDerivative(double input) {
+		return calculateOutput(input) * (1 - calculateOutput(input));
 	}
 
 }

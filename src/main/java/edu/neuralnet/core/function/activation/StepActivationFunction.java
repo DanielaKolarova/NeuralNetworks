@@ -1,5 +1,7 @@
 package edu.neuralnet.core.function.activation;
 
+import javax.naming.OperationNotSupportedException;
+
 /**
  * Step neuron activation function, the output y of this activation function is
  * binary, depending on whether the input meets a specified threshold, 0. The
@@ -26,6 +28,15 @@ public class StepActivationFunction implements ActivationFunction {
 	private double threshold = 0d;
 
 	/**
+	 * Default constructor
+	 * 
+	 * @param threshold
+	 */
+	public StepActivationFunction(double threshold) {
+		this.threshold = threshold;
+	}
+
+	/**
 	 * {@inheritDoc}
 	 */
 	@Override
@@ -36,9 +47,17 @@ public class StepActivationFunction implements ActivationFunction {
 			return yBellow;
 	}
 
+	/**
+	 * Step/threshold is not differentiable because there is a discontinuity at
+	 * zero. So in practice, when training with back-propagation, this function
+	 * is not used. Instead, the sigmoid, or some other smooth function, is
+	 * used.
+	 * 
+	 * @throws OperationNotSupportedException
+	 */
 	@Override
-	public double calculateDerivative(double totalInput) {
-		return 0;
+	public double calculateDerivative(double input) {
+		return 1d;
 	}
 
 }

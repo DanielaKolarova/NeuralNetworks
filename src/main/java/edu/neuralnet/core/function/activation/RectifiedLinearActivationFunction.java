@@ -14,9 +14,12 @@ public class RectifiedLinearActivationFunction implements ActivationFunction {
     }
 
 	@Override
-	public double calculateDerivative(double totalInput) {
-		// TODO Auto-generated method stub
-		return 0;
+	public double calculateDerivative(double input) {
+		 if (input >= 0) {
+	            return 1;
+		 }
+		 
+	     return 0;
 	}
 
 }

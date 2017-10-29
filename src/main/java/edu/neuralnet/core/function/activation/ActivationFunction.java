@@ -3,7 +3,7 @@ package edu.neuralnet.core.function.activation;
 /**
  * Neural networks activation function interface.
  */
-public interface ActivationFunction {
+public interface ActivationFunction extends DifferentiableFunction {
 
 	/**
 	 * Performs calculation based on the sum of input neurons output.
@@ -15,15 +15,5 @@ public interface ActivationFunction {
 	 * @return Output's calculation based on the sum of inputs
 	 */
 	double calculateOutput(double summedInput);
-
-	/**
-	 * Performs calculation of function's derivative.
-	 * 
-	 * @param totalInput
-	 *            neuron's total input
-	 * 
-	 * @return function's derivative calculated based on the total input
-	 */
-	double calculateDerivative(double totalInput);
 
 }
